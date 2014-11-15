@@ -22,11 +22,9 @@ cd /tmp && rm -rf chruby && git clone https://github.com/postmodern/chruby.git >
 cd chruby && sudo make install >/dev/null 2>&1
 ruby-install ruby 2.1.3 >/dev/null 2>&1
 
-
-echo "\nsource /usr/local/share/chruby/chruby.sh" >> /home/vagrant/.bashrc
+echo "source /usr/local/share/chruby/chruby.sh" >> /home/vagrant/.bashrc
 echo "chruby 2.1.3" >> /home/vagrant/.bashrc
 
 echo "Install bundle and padrino"
-gem install bundle --no-document
-gem install padrino --no-document
+gem install bundler --no-ri --no-rdoc
 
